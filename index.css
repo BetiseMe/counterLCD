@@ -1,0 +1,220 @@
+@font-face {
+  font-family: CursedTimerUlil;
+  src: url(CursedTimerUlil-Aznm.ttf);
+}
+
+/* made some room for media queries */
+
+/* Animated background from https://wweb.dev/resources/animated-css-background-generator/ */
+
+@keyframes cube {
+  from {
+    transform: scale(0) rotate(0deg) translate(-50%, -50%);
+    opacity: 1;
+  }
+  to {
+    transform: scale(20) rotate(960deg) translate(-50%, -50%);
+    opacity: 0;
+  }
+}
+
+.cubebg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #075957;
+  overflow: hidden;
+  z-index: -9;
+}
+
+.cubebg li {
+  position: absolute;
+  top: 80vh;
+  left: 45vw;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #077a76;
+  color: transparent;
+  transform-origin: top left;
+  transform: scale(0) rotate(0deg) translate(-50%, -50%);
+  animation: cube 7s ease-in forwards infinite;
+}
+
+.cubebg li:nth-child(0) {
+  animation-delay: 0s;
+  left: 40vw;
+  top: 54vh;
+  border-color: #077a76;
+}
+
+.cubebg li:nth-child(1) {
+  animation-delay: 2s;
+  left: 12vw;
+  top: 93vh;
+  border-color: #077a76;
+}
+
+.cubebg li:nth-child(2) {
+  animation-delay: 4s;
+  left: 23vw;
+  top: 42vh;
+}
+
+.cubebg li:nth-child(3) {
+  animation-delay: 6s;
+  left: 70vw;
+  top: 10vh;
+}
+
+.cubebg li:nth-child(4) {
+  animation-delay: 8s;
+  left: 99vw;
+  top: 70vh;
+}
+
+.cubebg li:nth-child(5) {
+  animation-delay: 10s;
+  left: 57vw;
+  top: 24vh;
+}
+
+.cubebg::after {
+  opacity: 1;
+}
+
+/* Custom CSS starts here */
+
+body {
+  margin: 0;
+  padding: 3rem 2rem;
+  caret-color: transparent;
+}
+
+h1 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 7rem;
+  color: #d1d7dd;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+h3 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 2.5rem;
+  color: #d1d7dd;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.board {
+  background: #073b64;
+  padding: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+  border-radius: 16px;
+  box-shadow: 10px 12px 10px #22222585;
+  border: 6px solid #c6d1e1;
+  outline: 2px solid #acb3bd;
+}
+
+.score {
+  position: relative;
+  background-color: #7e7e7e;
+  box-shadow: inset 1px 1px 0px 4px #5e5e5e;
+  margin: 0;
+  width: 210px;
+  height: 120px;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  background: transparent;
+  min-width: 215px;
+  padding: 0 3rem 3rem;
+  border: 4px solid #85a4cf;
+  border-radius: 10px;
+}
+
+.pts {
+  position: absolute;
+  top: -5rem;
+  left: 1rem;
+  font-family: CursedTimerUlil;
+  font-size: 6rem;
+  color: #252525;
+}
+
+.pts-shadow {
+  position: absolute;
+  top: -5rem;
+  left: 1rem;
+  font-family: CursedTimerUlil;
+  font-size: 6rem;
+  color: #777777;
+}
+
+.score-btns {
+  position: relative;
+  top: 1rem;
+}
+
+button {
+  background: none;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+  font-kerning: none;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  border-radius: 5px;
+  border: 1px solid #93a6c2;
+  border-width: 2px 1px;
+  padding: 5px 20px 5px 20px;
+  margin: 4px;
+  color: #ffffff;
+}
+
+button:hover {
+  background: #0a5289;
+}
+
+button:active {
+  background: #1b1d25;
+  transform: translateY(1px);
+}
+
+.clear-wrap {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#clear {
+  border-width: 2px;
+}
+
+#clear:hover {
+  background: #893333;
+  transform: scale(1.2);
+  box-shadow: #0000003d 0px 10px 15px -3px, #0000002e 0px 4px 6px -2px;
+}
+
+#clear:active {
+  background: #2e6e13;
+  transform: scale(1);
+}
