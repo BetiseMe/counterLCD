@@ -4,6 +4,8 @@
 
 This is version one of two designs. I couldn't decide, so I made it in two versions. This one has an animated background. You can change it if you want. Any realism is in screen size, you won't see LCD signs in a gym.
 
+[Live Demo](https://lcdscore.netlify.app/)
+
 ## About the course
 
 Learn Javascript for free is a beginner's course that guides you through all the necessary steps. I have enjoyed it so far. I have some concerns about writing JavaScript in HTML, but I guess it's much easier for a beginner to do it like that. FreeCodeCamp and The Odin Project take a different approach. I like their beginner lessons better, but this is a good start.
