@@ -1,4 +1,4 @@
-# Basketball scoreboard soloproject
+# Basketball Scoreboard LCD
 
 ## ![SCOREBOARD WITH LCD DIGITS](https://github.com/BetiseMe/counterLCD/blob/main/bbslcd.gif?raw=true)
 
